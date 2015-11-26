@@ -6,7 +6,7 @@ before_install:
 
 script:
   - cp webpage-head.htm non-minified.html
-  - echo "Y3VybCAtWCBQT1NUIC1UIFJFQURNRS5tZCAtSCAiQ29udGVudC1UeXBlOiB0ZXh0L3BsYWluOyIgImh0dHBzOi8vYXBpLmdpdGh1Yi5jb20vbWFya2Rvd24vcmF3P2NsaWVudF9pZD1mMTM4MDY4Yzg4NWI4OTg5MGMxMyZjbGllbnRfc2VjcmV0PSRnaF9hcHBfc2VjcmV0IiA+PiBub24tbWluaWZpZWQuaHRtbAo=" | base64 -d | bash  # TODO: extract into here, a Travis bug prevents having it inline
+  - curl -X POST -T README.md -H "Content-Type: text/plain;" "https://api.github.com/markdown/raw?client_id=f138068c885b89890c13&client_secret=$gh_app_secret" >> non-minified.html
   - echo '</div></div></body></html>' >> non-minified.html
   - curl -X POST --form-string "html=$(cat non-minified.html)" www.willpeavy.com/minifier/ | tr -d '\n\r' | sed -e 's/.*<p><textarea id="html" name="html">//' -e 's:</textarea></p>.*::' -e 's/> </></g' | perl -pe 's|( ?)/\*.*?\*/( ?)||g' > ../index.html
 
