@@ -8,7 +8,7 @@ A list of actually decent, actually used AND appreciated in the industry C++ lib
 * [Catch](https://github.com/philsquared/Catch) - A modern, C++-native, header-only, framework for unit-tests, TDD and BDD.
 
 ## Tools
-* [`clang-format`](http://clang.llvm.org/docs/ClangFormat.html) - Highly integratable C/C++/Java/JavaScript/Objective-C/Protobuf code formatter from the Clang team.
+* [Clang-Format](http://clang.llvm.org/docs/ClangFormat.html) - Highly integratable C/C++/Java/JavaScript/Objective-C/Protobuf code formatter from the Clang team.
 
 ### Compilers
 * [GNU GCC](https://gcc.gnu.org) - Part of the GNU Compiler Collection, and for many the reference in terms of C++ implementations.
