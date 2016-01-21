@@ -13,7 +13,7 @@ before_install:
 
 script:
   - cp webpage-head.htm ../index.html
-  - bash convert-to-html.sh  # TODO: extract into here, a Travis bug prevents having it inline
+  - echo "Y3VybCAtWCBQT1NUIC1UIFJFQURNRS5tZCAtSCAnQ29udGVudC1UeXBlOiB0ZXh0L3BsYWluOycgaHR0cHM6Ly9hcGkuZ2l0aHViLmNvbS9tYXJrZG93bi9yYXcgPj4gLi4vaW5kZXguaHRtbAo=" | base64 -d | bash  # TODO: extract into here, a Travis bug prevents having it inline
   - echo '</div></div></body></html>' >> ../index.html
 
 after_success:
