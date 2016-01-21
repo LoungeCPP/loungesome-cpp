@@ -1,0 +1,28 @@
+sudo: false
+language: generic
+
+addons:
+  apt:
+    packages:
+      - markdown
+    sources:
+      - r-packages-precise
+
+before_install:
+  - openssl aes-256-cbc -K $encrypted_34922f73314b_key -iv $encrypted_34922f73314b_iv -in gh_rsa.enc -out gh_rsa -d
+
+script:
+  - markdown README.md > ../index.html
+  #TODO(?): prettify it up with some onjected HTML/CSS
+
+after_success:
+  - if [ -n "$TRAVIS_PULL_REQUEST" ]; then echo "Update webpage for commits $TRAVIS_COMMIT_RANGE" > $TRAVIS_BUILD_DIR/../DOC_UPDATE_MSG; fi
+  - if [ -n "$TRAVIS_PULL_REQUEST" ]; then echo >> $TRAVIS_BUILD_DIR/../DOC_UPDATE_MSG; fi
+  - if [ -n "$TRAVIS_PULL_REQUEST" ]; then git log $TRAVIS_COMMIT_RANGE --pretty=oneline >> $TRAVIS_BUILD_DIR/../DOC_UPDATE_MSG; fi
+  - if [ -n "$TRAVIS_PULL_REQUEST" ]; then mkdir -p ~/.ssh && cp gh_rsa ~/.ssh/id_rsa && chmod 700 ~/.ssh && chmod 600 ~/.ssh/id_rsa; fi
+  - if [ -n "$TRAVIS_PULL_REQUEST" ]; then git clone -b gh-pages git@github.com:$TRAVIS_REPO_SLUG.git $TRAVIS_BUILD_DIR-gh-pages; fi
+  - if [ -n "$TRAVIS_PULL_REQUEST" ]; then cd $TRAVIS_BUILD_DIR-gh-pages; fi
+  - if [ -n "$TRAVIS_PULL_REQUEST" ]; then cp ../index.html .; fi
+  - if [ -n "$TRAVIS_PULL_REQUEST" ]; then git config --global user.email "nabijaczleweli@gmail.com" && git config --global user.name "Nabijaczleweli Autouploader Bot" && git config --global push.default simple; fi
+  - if [ -n "$TRAVIS_PULL_REQUEST" ]; then git add * && git commit -F $TRAVIS_BUILD_DIR/../DOC_UPDATE_MSG; fi
+  - if [ -n "$TRAVIS_PULL_REQUEST" ]; then git push && cd $TRAVIS_BUILD_DIR; fi
