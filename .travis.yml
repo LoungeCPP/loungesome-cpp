@@ -12,8 +12,9 @@ before_install:
   - openssl aes-256-cbc -K $encrypted_34922f73314b_key -iv $encrypted_34922f73314b_iv -in gh_rsa.enc -out gh_rsa -d
 
 script:
-  - markdown README.md > ../index.html
-  #TODO(?): prettify it up with some onjected HTML/CSS
+  - cp webpage-head.htm ../index.html
+  - curl -X POST -T README.md -H "Content-Type: text/plain;" https://api.github.com/markdown/raw >> ../index.html
+  - echo '</div></div></body></html>' >> ../index.html
 
 after_success:
   - if [ -n "$TRAVIS_PULL_REQUEST" ]; then echo "Update webpage for commits $TRAVIS_COMMIT_RANGE" > $TRAVIS_BUILD_DIR/../DOC_UPDATE_MSG; fi
