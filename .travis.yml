@@ -13,7 +13,7 @@ before_install:
 
 script:
   - cp webpage-head.htm ../index.html
-  - echo "Y3VybCAtWCBQT1NUIC1UIFJFQURNRS5tZCAtSCAiQ29udGVudC1UeXBlOiB0ZXh0L3BsYWluOyIgImh0dHBzOi8vYXBpLmdpdGh1Yi5jb20vbWFya2Rvd24vcmF3P2NsaWVudF9pZD1mMTM4MDY4Yzg4NWI4OTg5MGMxMyZjbGllbnRfc2VjcmV0PSQoZ2hfYXBwX3NlY3JldCkiID4+IC4uL2luZGV4Lmh0bWwK" | base64 -d | bash  # TODO: extract into here, a Travis bug prevents having it inline
+  - echo "Y3VybCAtWCBQT1NUIC1UIFJFQURNRS5tZCAtSCAiQ29udGVudC1UeXBlOiB0ZXh0L3BsYWluOyIgImh0dHBzOi8vYXBpLmdpdGh1Yi5jb20vbWFya2Rvd24vcmF3P2NsaWVudF9pZD1mMTM4MDY4Yzg4NWI4OTg5MGMxMyZjbGllbnRfc2VjcmV0PSRnaF9hcHBfc2VjcmV0IiA+PiAuLi9pbmRleC5odG1sCg==" | base64 -d | bash  # TODO: extract into here, a Travis bug prevents having it inline
   - echo '</div></div></body></html>' >> ../index.html
 
 after_success:
