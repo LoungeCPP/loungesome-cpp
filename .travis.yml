@@ -13,7 +13,7 @@ before_install:
 
 script:
   - cp webpage-head.htm ../index.html
-  - curl -X POST -T README.md -H "Content-Type: text/plain;" https://api.github.com/markdown/raw >> ../index.html
+  - curl -X POST -T README.md -H 'Content-Type: text/plain;' https://api.github.com/markdown/raw >> ../index.html
   - echo '</div></div></body></html>' >> ../index.html
 
 after_success:
