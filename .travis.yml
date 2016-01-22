@@ -2,7 +2,7 @@ sudo: false
 language: generic
 
 before_install:
-  - openssl aes-256-cbc -K $encrypted_34922f73314b_key -iv $encrypted_34922f73314b_iv -in gh_rsa.enc -out gh_rsa -d
+  - if [ -n "$TRAVIS_PULL_REQUEST" ]; then openssl aes-256-cbc -K $encrypted_34922f73314b_key -iv $encrypted_34922f73314b_iv -in gh_rsa.enc -out gh_rsa -d; fi
 
 script:
   - cp webpage-head.htm non-minified.html
