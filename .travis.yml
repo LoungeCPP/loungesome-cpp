@@ -12,9 +12,10 @@ before_install:
   - openssl aes-256-cbc -K $encrypted_34922f73314b_key -iv $encrypted_34922f73314b_iv -in gh_rsa.enc -out gh_rsa -d
 
 script:
-  - cp webpage-head.htm ../index.html
-  - echo "Y3VybCAtWCBQT1NUIC1UIFJFQURNRS5tZCAtSCAiQ29udGVudC1UeXBlOiB0ZXh0L3BsYWluOyIgImh0dHBzOi8vYXBpLmdpdGh1Yi5jb20vbWFya2Rvd24vcmF3P2NsaWVudF9pZD1mMTM4MDY4Yzg4NWI4OTg5MGMxMyZjbGllbnRfc2VjcmV0PSRnaF9hcHBfc2VjcmV0IiA+PiAuLi9pbmRleC5odG1sCg==" | base64 -d | bash  # TODO: extract into here, a Travis bug prevents having it inline
-  - echo '</div></div></body></html>' >> ../index.html
+  - cp webpage-head.htm non-minified.html
+  - echo "Y3VybCAtWCBQT1NUIC1UIFJFQURNRS5tZCAtSCAiQ29udGVudC1UeXBlOiB0ZXh0L3BsYWluOyIgImh0dHBzOi8vYXBpLmdpdGh1Yi5jb20vbWFya2Rvd24vcmF3P2NsaWVudF9pZD1mMTM4MDY4Yzg4NWI4OTg5MGMxMyZjbGllbnRfc2VjcmV0PSRnaF9hcHBfc2VjcmV0IiA+PiBub24tbWluaWZpZWQuaHRtbAo=" | base64 -d | bash  # TODO: extract into here, a Travis bug prevents having it inline
+  - echo '</div></div></body></html>' >> non-minified.html
+  - curl -X POST --form-string "html=$(cat non-minified.html)" www.willpeavy.com/minifier/ | tr -d '\n\r' | sed -e 's/.*<p><textarea id="html" name="html">//' -e 's:</textarea></p>.*::' -e 's/> </></g' | perl -pe 's|( ?)/\*.*?\*/( ?)||g' > ../index.html
 
 after_success:
   - if [ -n "$TRAVIS_PULL_REQUEST" ]; then echo "Update webpage for commits $TRAVIS_COMMIT_RANGE" > $TRAVIS_BUILD_DIR/../DOC_UPDATE_MSG; fi
