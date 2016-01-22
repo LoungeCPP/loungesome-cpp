@@ -10,5 +10,5 @@ A list of a list of actually decent, actually used AND appreciated in the indust
 ## Compilers
 * [GNU GCC](https://gcc.gnu.org) - Part of the GNU Compiler Collection, and for many the reference in terms of C++ implementations.
 * [Clang](http://clang.llvm.org/) - A modern, modular C++ compiler, often the first to implement new C++ features. Bundled with [Xcode](https://developer.apple.com/xcode/) for Mac OS users.
-* [Microsoft Visual C++](https://en.wikipedia.org/wiki/Visual_C%2B%2B) - (or *MSVC*) The classic C++ compiler from Microsoft, for building Windows applications. Part of [Visual Studio Community](https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx).
 * [MinGW-w64](http://mingw-w64.org/doku.php) - A port of the GNU GCC compiler to Windows, offering almost everything the Linux version offers.
+* [Microsoft Visual C++](https://en.wikipedia.org/wiki/Visual_C%2B%2B) - (or *MSVC*) The classic C++ compiler from Microsoft, for building Windows applications. Part of [Visual Studio Community](https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx).
