@@ -6,3 +6,8 @@ A list of a list of actually decent, actually used AND appreciated in the indust
 
 ## Testing
 * [Catch](https://github.com/philsquared/Catch) - A modern, C++-native, header-only, framework for unit-tests, TDD and BDD.
+
+## Compilers
+* [GNU g++](https://gcc.gnu.org) - Part of the GNU Compiler Collection, and for many the reference in terms of C++ implementations.
+* [clang++](http://clang.llvm.org/) - A modern, modular C++ compiler, often the first to implement new C++ features. Bundled with [Xcode](https://developer.apple.com/xcode/) for Mac OS users.
+* [Microsoft Visual C++](https://en.wikipedia.org/wiki/Visual_C%2B%2B) - (Or *MSVC*) The classic C++ compiler from Microsoft, for building Windows applications. Part of [Visual Studio Community](https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx).
