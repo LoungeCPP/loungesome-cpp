@@ -1,13 +1,6 @@
 sudo: false
 language: generic
 
-addons:
-  apt:
-    packages:
-      - markdown
-    sources:
-      - r-packages-precise
-
 before_install:
   - openssl aes-256-cbc -K $encrypted_34922f73314b_key -iv $encrypted_34922f73314b_iv -in gh_rsa.enc -out gh_rsa -d
 
