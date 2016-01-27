@@ -4,6 +4,13 @@ A list of actually decent, actually used AND appreciated in the industry C++ lib
 ## Frameworks
 * [Boost](http://www.boost.org/) - One of the most highly regarded and expertly designed C++ library projects in the world.
 
+## Benchmarking
+* [Nonius](https://nonius.io/) - A C++ micro-benchmarking framework
+
+## Libraries
+* [cppformat](https://cppformat.github.io/latest/index.html) - an open-source formatting library for C++. It can be used as a safe alternative to printf or as a fast alternative to IOStreams.
+* [date](https://github.com/HowardHinnant/date) - A date and time library based on the C++11 (and beyond) `<chrono>` header 
+
 ## Testing
 * [Catch](https://github.com/philsquared/Catch) - A modern, C++-native, header-only, framework for unit-tests, TDD and BDD.
 
