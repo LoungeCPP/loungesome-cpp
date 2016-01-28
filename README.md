@@ -26,4 +26,4 @@ A list of actually decent, actually used AND appreciated in the industry C++ lib
 
 ### Online compilers
 * [Coliru](http://coliru.stacked-crooked.com/) - Compile, link, run.
-* [GCC Explorer](https://gcc.godbolt.org/) - View generated assembly for many compilers.
+* [Compiler Explorer](https://gcc.godbolt.org/) - View generated assembly for many compilers.
