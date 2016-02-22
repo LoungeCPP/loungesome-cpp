@@ -1,4 +1,4 @@
-# loungesome-cpp [![Build Status](https://travis-ci.org/LoungeCPP/loungesome-cpp.svg?branch=master)](https://travis-ci.org/LoungeCPP/loungesome-cpp) [![Licence](https://img.shields.io/badge/license-CC0-blue.svg?style=flat)](LICENSE)
+# loungesome-cpp [![Build Status](https://travis-ci.org/LoungeCPP/loungesome-cpp.svg?branch=master)](https://travis-ci.org/LoungeCPP/loungesome-cpp)&nbsp;[![Licence](https://img.shields.io/badge/license-CC0-blue.svg?style=flat)](LICENSE)
 A list of actually decent, actually used AND appreciated in the industry C++ libraries
 
 ## Frameworks
