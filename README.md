@@ -21,6 +21,7 @@ A list of actually decent, actually used AND appreciated in the industry C++ lib
 ## Tools
 * [Clang-Format](http://clang.llvm.org/docs/ClangFormat.html) - Highly integratable C/C++/Java/JavaScript/Objective-C/Protobuf code formatter from the Clang team.
 * [valgrind](http://valgrind.org/) - A programming tool for memory debugging, memory leak detection, and profiling.
+* [MSYS2](https://msys2.github.io/) - provide support to facilitate using the bash shell, Autotools, revision control systems and the like for building native Windows applications using MinGW-w64 toolchains.
 
 ### Compilers
 * [GNU GCC](https://gcc.gnu.org) - Part of the GNU Compiler Collection, and for many the reference in terms of C++ implementations.
