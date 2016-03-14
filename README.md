@@ -7,6 +7,10 @@ A list of actually decent, actually used AND appreciated in the industry C++ lib
 ## Benchmarking
 * [Nonius](https://nonius.io/) - A C++ micro-benchmarking framework.
 
+## Language interop
+* [pybind11](https://github.com/pybind/pybind11) - Seamless operability between C++11 and Python.
+* [Sol2](https://github.com/ThePhD/sol2) - Header-only C++ library binding to Lua.
+
 ## Libraries
 * [cppformat](https://cppformat.github.io/latest/index.html) - An open-source formatting library for C++. It can be used as a safe alternative to printf or as a fast alternative to IOStreams.
 * [date](https://github.com/HowardHinnant/date) - A date and time library based on the C++11 (and beyond) `<chrono>` header.
