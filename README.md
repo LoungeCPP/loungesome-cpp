@@ -24,12 +24,6 @@ A list of actually decent, actually used AND appreciated in the industry C++ lib
 * [valgrind](http://valgrind.org/) - A programming tool for memory debugging, memory leak detection, and profiling.
 * [MSYS2](https://msys2.github.io/) - provide support to facilitate using the bash shell, Autotools, revision control systems and the like for building native Windows applications using MinGW-w64 toolchains.
 
-### Compilers
-* [GNU GCC](https://gcc.gnu.org) - Part of the GNU Compiler Collection, and for many the reference in terms of C++ implementations.
-* [Clang](http://clang.llvm.org/) - A modern, modular C++ compiler, often the first to implement new C++ features. Bundled with [Xcode](https://developer.apple.com/xcode/) for Mac OS users.
-* [MinGW-w64](http://mingw-w64.org/doku.php) - A port of the GNU GCC compiler to Windows, offering almost everything the Linux version offers.
-* [Microsoft Visual C++](https://en.wikipedia.org/wiki/Visual_C%2B%2B) (or *MSVC*) - The classic C++ compiler from Microsoft, for building Windows applications. Part of [Visual Studio Community](https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx), and available stand-alone as [Visual C++ Build Tools](http://blogs.msdn.com/b/vcblog/archive/2015/11/02/announcing-visual-c-build-tools-2015-standalone-c-tools-for-build-environments.aspx).
-
 ### Online compilers
 * [Coliru](http://coliru.stacked-crooked.com/) - Compile, link, run.
 * [Compiler Explorer](https://gcc.godbolt.org/) - View generated assembly for many compilers.
